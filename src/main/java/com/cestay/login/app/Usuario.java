@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Usuario {
 
-    private long id;
+    private Long id;
     private String nombre;
     private String apellido;
     private String email;
@@ -16,7 +16,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(long id, String nombre, String apellido, String email, String password, long perfil) {
+    public Usuario(Long id, String nombre, String apellido, String email, String password, long perfil) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -26,7 +26,7 @@ public class Usuario {
         this.direcciones = new ArrayList<>();
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -52,6 +52,10 @@ public class Usuario {
 
     public void setDireccion(Direccion direccion) {
         this.direcciones.add(direccion);
+    }
+
+    public List<Direccion> getDirecciones() {
+        return direcciones;
     }
 
 }
